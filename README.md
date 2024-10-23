@@ -21,6 +21,20 @@ Install the required libraries via pip:
 pip install ollama colorama termcolor
 ```
 
+## Configuration
+
+The configuration is handled through a config.txt file, which should be placed in the same directory as the script. The file should have the following structure:
+
+```
+OllamaServerURL=192.168.1.35
+OllamaServerPort=11434
+DefaultContextLength=128000
+DefaultModelName=llama3.1:70b
+DefaultHistoryEnabled=True
+DefaultCustomModelName=CustomLLM
+DefaultSystemPrompt=This is a default system prompt.
+```
+
 ## Usage
 The script provides an interactive prompt where users can type messages to the LLM or use various commands to control and configure the chat experience.
 
