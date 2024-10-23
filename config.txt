@@ -1,4 +1,4 @@
-OllamaServerURL=192.168.1.35
+OllamaServerURL=127.0.0.1
 OllamaServerPort=11434
 DefaultContextLength=128000
 DefaultModelName=llama3.1:8b
