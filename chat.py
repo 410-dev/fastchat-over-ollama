@@ -171,15 +171,25 @@ class ChatHistory:
                 for chat in self.history:
                     if 'user' in chat:
                         cprint(f"You: {chat['user']}", 'green')
+                        print()
+                        print()
                     if 'assistant' in chat:
                         cprint(f"{custom_name if custom_name else data['model_name']}: {chat['assistant']}", 'magenta')
+                        print()
+                        print()
                     if 'system' in chat:
                         cprint(f"System: {chat['system']}", 'cyan')
+                        print()
+                        print()
         except FileNotFoundError:
             print(f"No saved chat history found with the name '{name}'.")
 
 # Chat interface function
 def interactive_chat():
+
+    global system_prompt
+    global custom_name
+
     history = ChatHistory()
     model_name = default_model_name
     custom_name = default_custom_model_name
